@@ -83,3 +83,24 @@ const stampaOgniSecondo = (messaggio) => {
 stampaOgniSecondo("è passato un secondo");
 
 
+// Snack 6
+// Crea un contatore automatico con setInterval
+// Definisci una funzione creaContatoreAutomatico che accetta un intervallo di tempo e restituisce una funzione che avvia un setInterval, incrementando un contatore e stampandolo.
+
+let count2 = 0;
+
+const creaContatoreAutomatico = (interval) => {
+    const intervallo = setInterval(() => {
+        console.log(count2);
+        count2++;
+
+        // DEBUG PER NON CONTARE ALL'INFINITO
+        if (count2 === 10) {
+            clearInterval(intervallo);
+            console.log("Intervallo fermato.");
+        }
+    }, interval);
+}
+
+creaContatoreAutomatico(100);
+
