@@ -5,7 +5,7 @@
 // Quindi, riscrivi la funzione somma con la sintassi delle arrow functions.
 
 function somma1(n1, n2) {
-    somma = n1 + n2;
+    let somma = n1 + n2;
     return somma;
 }
 console.log(somma1(1, 2));
@@ -22,9 +22,28 @@ const somma3 = (n1, n2) => {
 }
 console.log(somma3(1, 2));
 
+
 // Snack 2
 // Crea una arrow function che calcola il quadrato di un numero.
 // Definisci una funzione chiamata quadrato che accetta un numero e restituisce il suo quadrato in una sola riga.
 
 const quadrato = (n) => n * n;
 console.log(quadrato(2));
+
+
+// Snack 3
+// Crea una funzione eseguiOperazione
+// Definisci una funzione eseguiOperazione che accetta tre parametri: due numeri e una funzione operatore (callback). La funzione deve eseguire l'operazione fornita sui due numeri.
+
+const somma = (n1, n2) => n1 + n2;
+const sottrai = (n1, n2) => n1 - n2;
+const moltiplica = (n1, n2) => n1 * n2;
+const dividi = (n1, n2) => n1 / n2;
+
+const eseguiOperazione = (n1, n2, operazione) => operazione(n1, n2);
+
+console.log(eseguiOperazione(1, 2, somma));
+console.log(eseguiOperazione(2, 1, sottrai));
+console.log(eseguiOperazione(5, 2, moltiplica));
+console.log(eseguiOperazione(10, 2, dividi));
+
